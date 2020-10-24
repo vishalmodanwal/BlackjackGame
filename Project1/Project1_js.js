@@ -44,7 +44,7 @@ async function dealerLogic()
 	showcard(card,Dealer);
 	Updatescore(card,Dealer);
 	showScore(Dealer);
-   await sleep(600);
+   await sleep(200);
   }
   if(Dealer["score"]>15)
    {
