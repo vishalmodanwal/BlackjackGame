@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> project</title>
+	<link rel="stylesheet" type="text/css" href="Project1_css.css">
+</head>
+<body>
+<div  class="flexbox">
+    <!--p style="color:green">Background sound</p-->
+    <audio controls autoplay loop="infinit" volume=0.2>
+  <source src="sounds/background.mpeg" type="audio/ogg">
+</audio>
+
+        	          <h1 >Blackjack Game</h1>
+        	          <h2 id="blackjackresult">Let's play</h2>
+        	               <div class="flexbox_row1">
+        		                      <div id="your-box">
+        		                        <h2 style="color:white">You: <span id="yourscore">0</span></h2>
+        	                       </div>
+        	                      <div id="Dealer-box">
+        	                         <h2 style="color:white">Dealer: <span id="Dealerscore">0</span></h2>
+        	                     </div>
+        	              </div>
+        	    <div class="flexbox_row2">
+        	           <button id="hit-button" class="btn btn-info">Hit</button>
+        	           <button id="stand-button" class="btn btn-warning">Stand</button>
+        	           <button  id ="deal-button" class="btn btn-danger">Deal</button>
+              </div>
+          <div class="flexbox_row3">
+        	       <table>
+        	        	<tr>
+        		         <th>Wins</th> 
+        		         <th>Loss</th>
+        		         <th>Draw</th>
+        			     </tr>
+        			    <tr>
+        			     	<td> <span id="wins">0</span></td>
+        			     	<td> <span id="losses">0</span></td>
+        				    <td><span id="draws">0</span></td>
+        	 		   </tr>
+       			   </table>
+      	   <div>
+      </div>
+
+<script src="Project1_js.js"></script>
+</body>
+</html>
