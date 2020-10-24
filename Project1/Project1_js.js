@@ -13,9 +13,9 @@ let blackjackGame={
 };
 const You=blackjackGame["you"];
 const Dealer=blackjackGame["dealer"];
-const hitsound=new Audio("swish.m4a");
-const wonsound=new Audio("cash.mp3");
-const lastsound=new Audio("aww.mp3");
+const hitsound=new Audio("sounds/swish.m4a");
+const wonsound=new Audio("sounds/cash.mp3");
+const lastsound=new Audio("sounds/aww.mp3");
 document.querySelector("#hit-button").addEventListener("click",blackjackHit);
 document.querySelector("#deal-button").addEventListener("click",blackjackdeal);
 document.querySelector("#stand-button").addEventListener("click",dealerLogic);
@@ -85,7 +85,7 @@ function showcard(card,Activeplayer)
 	if(Activeplayer["score"]<=21)
 	{
     let cardimage=document.createElement("img");
-	cardimage.src=`${card}.png`;
+	cardimage.src=`images/${card}.png`;
 	document.querySelector(Activeplayer["div"]).appendChild(cardimage);
 	hitsound.play();
   }
