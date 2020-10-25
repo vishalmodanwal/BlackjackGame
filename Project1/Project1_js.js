@@ -19,8 +19,11 @@ const lastsound=new Audio("sounds/aww.mp3");
 document.querySelector("#hit-button").addEventListener("click",blackjackHit);
 document.querySelector("#deal-button").addEventListener("click",blackjackdeal);
 document.querySelector("#stand-button").addEventListener("click",dealerLogic);
+x=document.getElementById("ad");
+x.volume=0.2;
 function blackjackHit()
-{
+{ 
+  x.pause();
    if(blackjackGame["isStand"]==false)
    {
    let card=randomcard();
@@ -44,7 +47,7 @@ async function dealerLogic()
 	showcard(card,Dealer);
 	Updatescore(card,Dealer);
 	showScore(Dealer);
-   await sleep(200);
+   await sleep(400);
   }
   if(Dealer["score"]>15)
    {
@@ -57,7 +60,8 @@ async function dealerLogic()
 function blackjackdeal()
 {  
   if(blackjackGame["turnsOver"]==true)
-  {
+  {  
+	  x.play();
 	 let yourimg=document.querySelector(You["div"]).querySelectorAll("img");
 	   for(let i=0;i<yourimg.length;i++)
 	   {
